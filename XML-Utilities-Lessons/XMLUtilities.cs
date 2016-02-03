@@ -1,16 +1,16 @@
 ﻿using System;
 using System.IO;
 using System.Xml.Serialization;
-
 namespace XML_Utilities_Lessons
 {
 	public static class XmlUtilities
 	{
 		public static string FolderName;
+		//I made some refactoring
+
 		public static void SaveTest(Test test)
 		{
 			string fileAddress = TestAddress(test);
-
 			while (File.Exists(fileAddress+".xml"))
 			{
 				fileAddress += "(new)";
